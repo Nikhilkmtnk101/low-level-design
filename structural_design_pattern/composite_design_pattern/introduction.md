@@ -2,7 +2,7 @@
 
 The Composite Design Pattern is a **Structural Design Pattern** that facilitates the composition of objects into a tree-like structure. It enables the client code to treat individual objects and compositions of objects uniformly. This pattern provides a unified interface for both leaves (individual objects) and composites (structures composed of objects), simplifying the client code.
 
-##Conceptual Example
+## Conceptual Example
 1. Composite Pattern in Operating System's File System
    - Let’s try to understand the Composite pattern with an example of an operating system’s file system. In the file system, there are two types of objects: files and folders. There are cases when files and folders should be treated in the same way. This is where the Composite pattern comes in handy. 
    - Imagine that you need to run a search for a particular keyword in your file system. This search operation applies to both files and folders. For a file, it will just look into the contents of the file; for a folder, it will go through all files of that folder to find that keyword.
