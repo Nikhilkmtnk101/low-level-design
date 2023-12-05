@@ -1,4 +1,4 @@
-package solution_with_composite_design
+package main
 
 type FileSystem interface {
 	ls()

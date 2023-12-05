@@ -1,15 +1,15 @@
-package solution_with_composite_design
+package main
 
 import "fmt"
 
 type Folder struct {
-	name string
+	name       string
 	components []FileSystem
 }
 
-func (f *Folder) ls()  {
+func (f *Folder) ls() {
 	fmt.Println(f.name)
-	for component := range f.components:
-
+	for _, component := range f.components {
+		component.ls()
+	}
 }
-
