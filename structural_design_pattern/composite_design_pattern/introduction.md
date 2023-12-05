@@ -4,12 +4,12 @@ The Composite Design Pattern is a **Structural Design Pattern** that facilitates
 
 ## Conceptual Example
 1. Composite Pattern in Operating System's File System
-   - Let’s try to understand the Composite pattern with an example of an operating system’s file system. In the file system, there are two types of objects: files and folders. There are cases when files and folders should be treated in the same way. This is where the Composite pattern comes in handy. 
-   - Imagine that you need to run a search for a particular keyword in your file system. This search operation applies to both files and folders. For a file, it will just look into the contents of the file; for a folder, it will go through all files of that folder to find that keyword.
+- Let’s try to understand the Composite pattern with an example of an operating system’s file system. In the file system, there are two types of objects: files and folders. There are cases when files and folders should be treated in the same way. This is where the Composite pattern comes in handy. 
+- Imagine that you need to run a search for a particular keyword in your file system. This search operation applies to both files and folders. For a file, it will just look into the contents of the file; for a folder, it will go through all files of that folder to find that keyword.
    
 2. Composite Pattern in an Ordering System
-   - Imagine your application is like a tree, with Products and Boxes as its branches. A Box can hold Products or even smaller Boxes, creating a tree-like structure. Now, think about building an ordering system where an Order includes individual products or Boxes filled with products or nested Boxes. Calculating the total price directly becomes tricky. You'd need to unwrap all nested Boxes, go through Products and Boxes, and handle various class structures.
-   - Here's where the Composite pattern comes to the rescue. It suggests dealing with Products and Boxes through a common interface, using a method to calculate the total price. This method smoothly works by returning the price for a Product and, for a Box, recursively going through each item to add up the costs. This recursive approach ensures that no matter how deep the nesting goes, the total price is accurately calculated. Plus, Boxes can add extra costs like packaging expenses, making the application more adaptable and scalable. In simpler terms, the Composite pattern helps handle complex structures in your app, making it easier to calculate total prices in a flexible and efficient way.
+- Imagine your application is like a tree, with Products and Boxes as its branches. A Box can hold Products or even smaller Boxes, creating a tree-like structure. Now, think about building an ordering system where an Order includes individual products or Boxes filled with products or nested Boxes. Calculating the total price directly becomes tricky. You'd need to unwrap all nested Boxes, go through Products and Boxes, and handle various class structures.
+- Here's where the Composite pattern comes to the rescue. It suggests dealing with Products and Boxes through a common interface, using a method to calculate the total price. This method smoothly works by returning the price for a Product and, for a Box, recursively going through each item to add up the costs. This recursive approach ensures that no matter how deep the nesting goes, the total price is accurately calculated. Plus, Boxes can add extra costs like packaging expenses, making the application more adaptable and scalable. In simpler terms, the Composite pattern helps handle complex structures in your app, making it easier to calculate total prices in a flexible and efficient way.
    
 # Composite Design Pattern UML Diagram
 
@@ -17,7 +17,7 @@ The Composite Design Pattern is a **Structural Design Pattern** that facilitates
 
 This UML diagram illustrates the Composite pattern's class hierarchy, demonstrating relationships between key elements.
 1. **Component:**
-   - The Component interface describes operations that are common to both simple and complex elements of the tree.
+- The Component interface describes operations that are common to both simple and complex elements of the tree.
 
 2. **Leaf:**
    - The Leaf is a basic element of a tree that doesn't have sub-elements.
