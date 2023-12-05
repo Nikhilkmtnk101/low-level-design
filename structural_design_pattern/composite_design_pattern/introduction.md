@@ -13,7 +13,7 @@ The Composite Design Pattern is a **Structural Design Pattern** that facilitates
    
 # Composite Design Pattern UML Diagram
 
-  <img src="/Users/nikhilkumar/GolandProjects/low-level-design/structural_design_pattern/composite_design_pattern/composite_design_pattern_uml_diagram.png" alt="Composite Design Pattern UML Diagram" width="400" height="300">
+  <img src="composite_design_pattern_uml_diagram.png" alt="Composite Design Pattern UML Diagram" width="400" height="300">
 
 
 This UML diagram visually represents the structure of the Composite pattern. It illustrates how the Composite pattern is implemented in a class hierarchy, showcasing the relationships and interactions between the key elements. The diagram provides a clear overview of how composite objects, such as containers and leaf elements, are structured and how they collaborate to fulfill the design pattern's intent. The Composite pattern's UML diagram is a valuable resource for understanding the organization of classes and their roles in achieving a flexible and scalable composite structure within an application.
