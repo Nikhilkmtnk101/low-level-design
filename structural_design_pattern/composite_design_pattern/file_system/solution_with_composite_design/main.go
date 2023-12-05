@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+func clientCode(system FileSystem) {
+	system.ls()
+}
 
 func main() {
-	fmt.Println("Nikhil")
+	reportFile := NewFile("Report.doc")
+	picturesFile := NewFile("Picture.jpg")
+	files := []FileSystem{reportFile, picturesFile}
+	documentFolder := NewFolder("Documents", files)
+	clientCode(documentFolder)
 }

@@ -3,9 +3,15 @@ package main
 import "fmt"
 
 type File struct {
-	Name string
+	name string
+}
+
+func NewFile(name string) *File {
+	return &File{
+		name: name,
+	}
 }
 
 func (f *File) ls() {
-	fmt.Println("- ", f.Name)
+	fmt.Printf("%s\n", "-"+f.name)
 }
