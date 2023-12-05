@@ -13,49 +13,53 @@ The Composite Design Pattern is a **Structural Design Pattern** that facilitates
    
 # Composite Design Pattern UML Diagram
 
-  <img src="composite_design_pattern_uml_diagram.png" alt="Composite Design Pattern UML Diagram" width="400" height="300">
+<img src="composite_design_pattern_uml_diagram.png" alt="Composite Design Pattern UML Diagram" width="400" height="300">
 
-
-This UML diagram visually represents the structure of the Composite pattern. It illustrates how the Composite pattern is implemented in a class hierarchy, showcasing the relationships and interactions between the key elements. The diagram provides a clear overview of how composite objects, such as containers and leaf elements, are structured and how they collaborate to fulfill the design pattern's intent. The Composite pattern's UML diagram is a valuable resource for understanding the organization of classes and their roles in achieving a flexible and scalable composite structure within an application.
+This UML diagram illustrates the Composite pattern's class hierarchy, demonstrating relationships between key elements.
 1. **Component:**
-  - Declares the interface for objects in the composition.
-  - Common operations are defined, applicable to both leaf and composite classes.
+   - The Component interface describes operations that are common to both simple and complex elements of the tree.
 
 2. **Leaf:**
-  - Represents individual objects in the composition.
-  - Implements the operations defined in the Component interface.
-
+   - The Leaf is a basic element of a tree that doesn't have sub-elements.
+   - Usually, leaf components end up doing most of the real work, since they don’t have anyone to delegate the work to.
+  
 3. **Composite:**
-  - Represents composite objects (containers) that can contain leaves or other composites.
-  - Implements the operations defined in the Component interface.
-  - Contains child components.
+    - A Container, also known as a composite, is like a box that holds other things inside, which can be either individual items (leaves) or more boxes (other containers). 
+    - The interesting part is, the container doesn't really know exactly what's inside it, it treats everything the same way using a common interface.
+    - Upon receiving a request, a container delegates the work to its sub-elements, processes intermediate results and then returns the final result to the client.
 
+4. **Client:**
+    - The Client works with all elements through the component interface. 
+    - As a result, the client can work in the same way with both simple or complex elements of the tree.
+
+  
 ## Problem It Solves
 
 The Composite pattern addresses the following problems:
 
-1. **Client Code Complexity:**
-  - Dealing with complex tree structures can lead to complicated client code. The Composite pattern simplifies client code by providing a uniform interface.
+1. **Unified Treatment of Individual and Composite Objects for Reduced Client Code Complexity:**
+   - Without the Composite pattern, treating individual and composite objects differently in client code can be challenging. 
+   - This will lead to complicated client code when processing a complex tree-like structure.  
+   - This pattern enables the client to interact uniformly with both types(Leaf and Composite Objects) through common interface. 
 
-2. **Treating Individual and Composite Objects Uniformly:**
-  - Without the Composite pattern, treating individual and composite objects differently in client code can be challenging. This pattern allows the client to interact with both types uniformly.
+2. **Enables Open/Closed Principle:**
+   - We can introduce new element types(leaf types) into the app without breaking the existing code, which now works with the object tree.
+
 
 ## Use Cases
 
 Use the Composite Design Pattern when:
+1. **Hierarchical Structures:**
+   - The Composite pattern provides you with two basic element types that share a common interface: simple leaves and complex containers.
+   - A container can be composed of both leaves and other containers. This lets you construct a nested recursive object structure that resembles a tree.
 
-1. **You Want to Treat Objects Uniformly:**
-  - You want to treat individual objects and compositions of objects uniformly, enabling clients to interact with objects without worrying about their specific types.
+2. **You Want to Treat Objects Uniformly:**
+   - All elements defined by the Composite pattern share a common interface. 
+   - Using this interface, the client doesn't have to worry about the concrete class of the objects it works with.
 
-2. **Hierarchical Structures:**
-  - Your system involves a hierarchical structure where objects can be composed of other objects, forming a part-whole hierarchy.
+3. **Operations on the Whole Structure:**
+   - You need to perform operations on the entire structure, and you want these operations to be applicable to both individual objects and compositions.
 
-3. **Simplifying Client Code:**
-  - You want to simplify client code that deals with complex tree structures, making it more readable and maintainable.
-
-4. **Operations on the Whole Structure:**
-  - You need to perform operations on the entire structure, and you want these operations to be applicable to both individual objects and compositions.
-
-# Conceptual Example
-
-Let’s try to understand the **Composite pattern** with an example of an operating system’s file system. In the file system, there are two types of objects: files and folders. There are cases when files and folders should be treated in the same way. This is where the Composite pattern comes in handy.
+## References:
+1. https://refactoring.guru/design-patterns/composite
+2. https://www.youtube.com/watch?v=FLkCkUY7Wu0
